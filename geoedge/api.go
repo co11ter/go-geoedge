@@ -98,6 +98,7 @@ func fixKeys(source []byte) []byte {
 	result := string(source)
 
 	replacements := map[string]string{
+		`"last_run_time": ""`:  `"last_run_time": 0`,
 		`"sequence": []`:       `"sequence": {}`,
 		`"locations": []`:      `"locations": {}`,
 		`"emulation_sets": []`: `"emulation_sets": {}`,
